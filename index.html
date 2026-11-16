@@ -1,0 +1,1128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Baly® Brasil | Energéticos, Sobre Nós, Atletas, Eventos e Contato</title>
+  <meta name="description" content="Portal Baly Brasil (PT-BR). Conheça a história da Baly Energy Drink, toda a linha de energéticos 473ml, edições especiais, eventos e atendimento ao cliente." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Playfair+Display:wght@800;900&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <a href="#conteudo-principal" class="skip-link">Pular para o conteúdo principal</a>
+
+  <!-- Barra opcional para carregar suas fotos locais nos banners -->
+  <div class="asset-helper-bar" role="region" aria-label="Vincular fotos locais">
+    <span>Quer usar suas fotos locais nos banners principais? Selecione aqui:</span>
+    <button type="button" class="asset-helper-btn" onclick="document.getElementById('heroFileInput').click()">Banner 5 Latas Baly</button>
+    <button type="button" class="asset-helper-btn" onclick="document.getElementById('fuelFileInput').click()">Banner Baly FuelTech</button>
+    <input type="file" id="heroFileInput" accept="image/*" hidden />
+    <input type="file" id="fuelFileInput" accept="image/*" hidden />
+  </div>
+
+  <!-- Cabeçalho Principal -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="#" class="brand-logo" aria-label="Baly Brasil Início">
+        <svg viewBox="0 0 190 50" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="2" y="5" width="186" height="40" rx="6" fill="#FFCC00"/>
+          <text x="16" y="34" fill="#080808" font-family="'Playfair Display', Georgia, serif" font-weight="900" font-size="29" letter-spacing="1">BALY</text>
+          <text x="108" y="23" fill="#080808" font-family="Oswald, sans-serif" font-weight="700" font-size="11" letter-spacing="2">BRASIL</text>
+          <text x="108" y="36" fill="#080808" font-family="Oswald, sans-serif" font-weight="600" font-size="9.5" letter-spacing="1">ENERGY DRINK</text>
+        </svg>
+      </a>
+
+      <nav class="main-nav" aria-label="Navegação Principal">
+        <div class="nav-item" id="navProdutos">
+          <button type="button" class="nav-link" aria-expanded="false" onclick="toggleMegaMenu()">
+            Energéticos ▾
+          </button>
+          <div class="mega-dropdown" role="menu">
+            <div class="mega-cats">
+              <button type="button" onclick="filtrarCatalogo('todos')">Toda a Linha (15)</button>
+              <button type="button" onclick="filtrarCatalogo('tradicional')">Baly Tradicional</button>
+              <button type="button" onclick="filtrarCatalogo('frutas')">Sabores Tropicais</button>
+              <button type="button" onclick="filtrarCatalogo('zero')">Linha Sem Açúcar</button>
+              <button type="button" onclick="filtrarCatalogo('edicoes')">Edições Especiais</button>
+            </div>
+            <div class="mega-preview-grid">
+              <div class="mega-mini-card" onclick="abrirProdutoPorId('card-tradicional')">
+                <div class="mega-can-box flavor-tradicional">
+                  <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Energetico-baly-energy-drink-lata-473ml.jpg?width=300" alt="Lata Baly Tradicional 473ml" class="mega-thumb" />
+                </div>
+                <span>Tradicional</span>
+              </div>
+              <div class="mega-mini-card" onclick="abrirProdutoPorId('card-tropical')">
+                <div class="mega-can-box flavor-tropical">
+                  <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Energetico-baly-energy-drink-lata-473ml.jpg?width=300" alt="Lata Baly Tropical 473ml" class="mega-thumb" />
+                </div>
+                <span>Tropical</span>
+              </div>
+              <div class="mega-mini-card" onclick="abrirProdutoPorId('card-maca-verde')">
+                <div class="mega-can-box flavor-maca-verde">
+                  <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Energetico-baly-energy-drink-lata-473ml.jpg?width=300" alt="Lata Baly Maçã Verde 473ml" class="mega-thumb" />
+                </div>
+                <span>Maçã Verde</span>
+              </div>
+              <div class="mega-mini-card" onclick="abrirProdutoPorId('card-melancia')">
+                <div class="mega-can-box flavor-melancia">
+                  <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Energetico-baly-energy-drink-lata-473ml.jpg?width=300" alt="Lata Baly Melancia 473ml" class="mega-thumb" />
+                </div>
+                <span>Melancia</span>
+              </div>
+              <div class="mega-mini-card" onclick="abrirProdutoPorId('card-morango-pessego')">
+                <div class="mega-can-box flavor-morango">
+                  <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Energetico-baly-energy-drink-lata-473ml.jpg?width=300" alt="Lata Baly Morango e Pêssego 473ml" class="mega-thumb" />
+                </div>
+                <span>Morango &amp; Pêssego</span>
+              </div>
+              <div class="mega-mini-card" onclick="abrirProdutoPorId('card-fueltech')">
+                <div class="mega-can-box flavor-fueltech">
+                  <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Energetico-baly-energy-drink-lata-473ml.jpg?width=300" alt="Lata Baly FuelTech 473ml" class="mega-thumb" />
+                </div>
+                <span>FuelTech</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="nav-item"><a href="#sobre" class="nav-link">Sobre Nós</a></div>
+        <div class="nav-item"><a href="#novidades" class="nav-link">Novidades</a></div>
+        <div class="nav-item"><a href="#atletas" class="nav-link">Atletas &amp; Pistas</a></div>
+        <div class="nav-item"><a href="#promocoes" class="nav-link">Promoções</a></div>
+        <div class="nav-item"><a href="#eventos" class="nav-link">Eventos</a></div>
+        <div class="nav-item"><a href="#contato" class="nav-link">Contato</a></div>
+      </nav>
+
+      <div class="header-actions">
+        <button type="button" class="icon-btn" title="Buscar sabor" aria-label="Buscar sabor" onclick="focarBusca()">🔍</button>
+        <button type="button" class="icon-btn" title="Onde encontrar" aria-label="Onde encontrar" onclick="abrirModalInfo('onde')">📍</button>
+        <button type="button" class="icon-btn" title="Brasil (PT-BR)" aria-label="Região Brasil" onclick="abrirModalInfo('regiao')">BR</button>
+        <button type="button" class="icon-btn mobile-menu-btn" aria-label="Abrir menu" onclick="toggleMobileNav()">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="conteudo-principal">
+    <!-- Carrossel Hero Premium com Energéticos Reais -->
+    <section class="hero-showcase" aria-label="Destaques Baly Energy Drink">
+      <div class="hero-frame">
+        <!-- Slide 1: Banner Principal Studio Baly -->
+        <div class="hero-slide active" data-label="Baly Energy Drink Tradicional 473ml" data-card="card-tradicional">
+          <div class="hero-banner-card hero-banner-gold" id="heroSlide1Bg">
+            <div class="hero-banner-overlay-gold"></div>
+            <div class="hero-banner-content">
+              <span class="hero-copy-tag">A Maior Marca Brasileira</span>
+              <h1 class="hero-copy-title">ENERGIA COM<br>IDENTIDADE BRASIL</h1>
+              <p class="hero-copy-desc">Do clássico Baly Tradicional aos sabores que conquistaram o país: Tropical, Maçã Verde, Melancia e Morango e Pêssego.</p>
+              <div class="hero-btn-row">
+                <button type="button" class="btn-dark" onclick="abrirProdutoPorId('card-tradicional')">Conhecer Tradicional</button>
+                <a href="#produtos" class="btn-outline-dark">Ver Todos os 15 Sabores</a>
+              </div>
+            </div>
+            <div class="hero-cans-showcase">
+              <div class="hero-can-pedestal side-left flavor-tropical">
+                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Energetico-baly-energy-drink-lata-473ml.jpg?width=600" alt="Lata Baly Tropical 473ml" />
+                <span>Tropical</span>
+              </div>
+              <div class="hero-can-pedestal center-hero flavor-tradicional">
+                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Energetico-baly-energy-drink-lata-473ml.jpg?width=700" alt="Lata Baly Tradicional 473ml" />
+                <span>Tradicional 473ml</span>
+              </div>
+              <div class="hero-can-pedestal side-right flavor-melancia">
+                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Energetico-baly-energy-drink-lata-473ml.jpg?width=600" alt="Lata Baly Melancia 473ml" />
+                <span>Melancia</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2: Edição Especial Baly x FuelTech -->
+        <div class="hero-slide" data-label="Edição Especial Baly × FuelTech Turbinado" data-card="card-fueltech">
+          <div class="hero-banner-card hero-banner-fueltech" id="heroSlide2Bg">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/TEMPLE_Fit_1.5_challenge_cup_Race_car.jpg?width=1200" alt="Pista de competição motorsport Baly FuelTech" class="hero-bg-photo" />
+            <div class="hero-banner-overlay-dark"></div>
+            <div class="hero-banner-content">
+              <span class="hero-copy-tag">Collab Motorsport</span>
+              <h2 class="hero-copy-title">BALY × FUELTECH:<br>POTÊNCIA TURBINADA</h2>
+              <p class="hero-copy-desc">Lata colecionável 473ml inspirada nas pistas de arrancada e na telemetria de alta performance FuelTech.</p>
+              <button type="button" class="btn-primary" onclick="abrirProdutoPorId('card-fueltech')">Ver Edição FuelTech</button>
+            </div>
+            <div class="hero-cans-showcase">
+              <div class="hero-can-pedestal center-hero flavor-fueltech">
+                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Energetico-baly-energy-drink-lata-473ml.jpg?width=700" alt="Lata Baly FuelTech Turbinado 473ml" />
+                <span>Edição FuelTech</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 3: Sabores Tropicais em Latas Reais -->
+        <div class="hero-slide" data-label="Baly Sabores Tropicais 473ml" data-card="card-tropical">
+          <div class="hero-banner-card hero-banner-dark">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Battery_Energy_drink_cans.jpg?width=1200" alt="Latas de energéticos gelados" class="hero-bg-photo" />
+            <div class="hero-banner-overlay-dark"></div>
+            <div class="hero-banner-content">
+              <span class="hero-copy-tag">Sabores Exclusivos</span>
+              <h2 class="hero-copy-title">EXPLOSÃO TROPICAL<br>EM CADA LATA</h2>
+              <p class="hero-copy-desc">Maçã Verde, Açaí, Pitaya, Blueberry e Maracujá com Taurina, Cafeína e Vitaminas do Complexo B.</p>
+              <button type="button" class="btn-primary" onclick="filtrarCatalogo('frutas')">Explorar Sabores</button>
+            </div>
+            <div class="hero-cans-showcase">
+              <div class="hero-can-pedestal side-left flavor-maca-verde">
+                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Energetico-baly-energy-drink-lata-473ml.jpg?width=600" alt="Lata Baly Maçã Verde" />
+                <span>Maçã Verde</span>
+              </div>
+              <div class="hero-can-pedestal center-hero flavor-acai">
+                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Energetico-baly-energy-drink-lata-473ml.jpg?width=700" alt="Lata Baly Açaí" />
+                <span>Açaí 473ml</span>
+              </div>
+              <div class="hero-can-pedestal side-right flavor-pitaya">
+                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Energetico-baly-energy-drink-lata-473ml.jpg?width=600" alt="Lata Baly Pitaya" />
+                <span>Pitaya</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 4: Linha Baly Sem Açúcar -->
+        <div class="hero-slide" data-label="Baly Energy Drink Sem Açúcar" data-card="card-tradicional-zero">
+          <div class="hero-banner-card hero-banner-white">
+            <div class="hero-banner-content">
+              <span class="hero-copy-tag">Zero Açúcar</span>
+              <h2 class="hero-copy-title" style="color: #080808;">TODO O SABOR BALY,<br>ZERO AÇÚCAR</h2>
+              <p class="hero-copy-desc" style="color: #222222;">Mesma carga de energia, sem resíduo de adoçante e com a leveza que acompanha seus treinos e sua rotina.</p>
+              <button type="button" class="btn-dark" onclick="filtrarCatalogo('zero')">Ver Linha Zero</button>
+            </div>
+            <div class="hero-cans-showcase">
+              <div class="hero-can-pedestal center-hero flavor-zero-trad">
+                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Energetico-baly-energy-drink-lata-473ml.jpg?width=700" alt="Lata Baly Tradicional Sem Açúcar 473ml" />
+                <span>Zero Açúcar</span>
+              </div>
+              <div class="hero-can-pedestal side-right flavor-zero-trop">
+                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Energetico-baly-energy-drink-lata-473ml.jpg?width=600" alt="Lata Baly Tropical Sem Açúcar 473ml" />
+                <span>Tropical Zero</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Barra CTA Inferior -->
+        <div class="hero-bottom-cta">
+          <span class="hero-bottom-label" id="heroBottomLabel">Baly Energy Drink Tradicional 473ml</span>
+          <button type="button" class="hero-bottom-btn" id="heroBottomBtn" onclick="abrirProdutoPorId('card-tradicional')">SAIBA MAIS</button>
+        </div>
+
+        <!-- Setas e Indicadores -->
+        <button type="button" class="hero-arrow prev" aria-label="Slide anterior" onclick="mudarSlide(-1)">❮</button>
+        <button type="button" class="hero-arrow next" aria-label="Próximo slide" onclick="mudarSlide(1)">❯</button>
+
+        <div class="hero-controls-bar">
+          <button type="button" class="hero-dot active" aria-label="Slide 1" onclick="irParaSlide(0)"></button>
+          <button type="button" class="hero-dot" aria-label="Slide 2" onclick="irParaSlide(1)"></button>
+          <button type="button" class="hero-dot" aria-label="Slide 3" onclick="irParaSlide(2)"></button>
+          <button type="button" class="hero-dot" aria-label="Slide 4" onclick="irParaSlide(3)"></button>
+          <button type="button" class="hero-pause-btn" id="heroPauseBtn" aria-label="Pausar carrossel" onclick="alternarAutoplay()">❚❚</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Catálogo de Produtos (15 Latas Reais Baly Energy Drink) -->
+    <section id="produtos" class="section-block">
+      <div class="section-header-center">
+        <h2 class="section-title">NOSSOS <span>ENERGÉTICOS BALY</span></h2>
+        <p class="section-subtitle">Explore toda a linha Baly Energy Drink em lata de 473ml. Clique em qualquer lata para conferir a tabela nutricional completa.</p>
+      </div>
+
+      <div class="catalog-toolbar">
+        <div class="filter-pills" role="tablist" aria-label="Filtrar energéticos por linha">
+          <button type="button" class="filter-pill active" data-cat="todos" onclick="filtrarCatalogo('todos', this)">Todos (15)</button>
+          <button type="button" class="filter-pill" data-cat="tradicional" onclick="filtrarCatalogo('tradicional', this)">Tradicional</button>
+          <button type="button" class="filter-pill" data-cat="frutas" onclick="filtrarCatalogo('frutas', this)">Sabores Frutados</button>
+          <button type="button" class="filter-pill" data-cat="zero" onclick="filtrarCatalogo('zero', this)">Sem Açúcar</button>
+          <button type="button" class="filter-pill" data-cat="edicoes" onclick="filtrarCatalogo('edicoes', this)">Edições Especiais</button>
+        </div>
+        <input type="search" id="catalogSearch" class="catalog-search" placeholder="Buscar sabor (ex: Tropical, Melancia, FuelTech)..." aria-label="Buscar sabor" oninput="pesquisarCatalogo()" />
+      </div>
+
+      <div class="products-grid" id="productsGrid">
+        <!-- 1 -->
+        <article id="card-tradicional" class="product-card" data-cat="tradicional" data-flavor="flavor-tradicional" data-kcal="215 kcal" data-cafeina="114 mg" data-acucar="51 g" data-desc="O clássico que democratizou o energético no Brasil. Combinação equilibrada de taurina, cafeína e vitaminas do complexo B." onclick="abrirModalCard(this)">
+          <div>
+            <div class="product-card-img-wrap flavor-tradicional">
+              <span class="can-flavor-tag">TRADICIONAL</span>
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Energetico-baly-energy-drink-lata-473ml.jpg?width=600" alt="Lata Baly Energy Drink Tradicional 473ml" class="product-photo" loading="lazy" />
+            </div>
+            <span class="product-badge">Clássico 473ml</span>
+            <h3 class="product-name">Baly Tradicional</h3>
+            <p class="product-tagline">O sabor original que conquistou o Brasil.</p>
+          </div>
+          <button type="button" class="product-cta">Ver Detalhes</button>
+        </article>
+
+        <!-- 2 -->
+        <article id="card-tropical" class="product-card" data-cat="frutas" data-flavor="flavor-tropical" data-kcal="220 kcal" data-cafeina="114 mg" data-acucar="52 g" data-desc="Energético com sabor vibrante de frutas tropicais e o visual amarelo icônico da Baly Energy Drink." onclick="abrirModalCard(this)">
+          <div>
+            <div class="product-card-img-wrap flavor-tropical">
+              <span class="can-flavor-tag">SABOR TROPICAL</span>
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Energetico-baly-energy-drink-lata-473ml.jpg?width=600" alt="Lata Baly Energy Drink Tropical 473ml" class="product-photo" loading="lazy" />
+            </div>
+            <span class="product-badge">Mais Vendido</span>
+            <h3 class="product-name">Baly Tropical</h3>
+            <p class="product-tagline">Energético com sabor tropical refrescante.</p>
+          </div>
+          <button type="button" class="product-cta">Ver Detalhes</button>
+        </article>
+
+        <!-- 3 -->
+        <article id="card-maca-verde" class="product-card" data-cat="frutas" data-flavor="flavor-maca-verde" data-kcal="212 kcal" data-cafeina="114 mg" data-acucar="50 g" data-desc="Energético com equilíbrio perfeito entre o doce e o cítrico da maçã verde com energia prolongada." onclick="abrirModalCard(this)">
+          <div>
+            <div class="product-card-img-wrap flavor-maca-verde">
+              <span class="can-flavor-tag">SABOR MAÇÃ VERDE</span>
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Energetico-baly-energy-drink-lata-473ml.jpg?width=600" alt="Lata Baly Energy Drink Maçã Verde 473ml" class="product-photo" loading="lazy" />
+            </div>
+            <span class="product-badge">Frutado 473ml</span>
+            <h3 class="product-name">Baly Maçã Verde</h3>
+            <p class="product-tagline">Energético com toque cítrico de maçã verde.</p>
+          </div>
+          <button type="button" class="product-cta">Ver Detalhes</button>
+        </article>
+
+        <!-- 4 -->
+        <article id="card-melancia" class="product-card" data-cat="frutas" data-flavor="flavor-melancia" data-kcal="214 kcal" data-cafeina="114 mg" data-acucar="50 g" data-desc="Energético sabor melancia gelada, ideal para festas, dias quentes e treinos intensos." onclick="abrirModalCard(this)">
+          <div>
+            <div class="product-card-img-wrap flavor-melancia">
+              <span class="can-flavor-tag">SABOR MELANCIA</span>
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Energetico-baly-energy-drink-lata-473ml.jpg?width=600" alt="Lata Baly Energy Drink Melancia 473ml" class="product-photo" loading="lazy" />
+            </div>
+            <span class="product-badge">Frutado 473ml</span>
+            <h3 class="product-name">Baly Melancia</h3>
+            <p class="product-tagline">Energético com frescor intenso de melancia.</p>
+          </div>
+          <button type="button" class="product-cta">Ver Detalhes</button>
+        </article>
+
+        <!-- 5 -->
+        <article id="card-morango-pessego" class="product-card" data-cat="frutas" data-flavor="flavor-morango" data-kcal="218 kcal" data-cafeina="114 mg" data-acucar="51 g" data-desc="Energético que une o aroma do morango maduro com a suavidade do pêssego." onclick="abrirModalCard(this)">
+          <div>
+            <div class="product-card-img-wrap flavor-morango">
+              <span class="can-flavor-tag">MORANGO E PÊSSEGO</span>
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Energetico-baly-energy-drink-lata-473ml.jpg?width=600" alt="Lata Baly Energy Drink Morango e Pêssego 473ml" class="product-photo" loading="lazy" />
+            </div>
+            <span class="product-badge">Sucesso Nacional</span>
+            <h3 class="product-name">Baly Morango e Pêssego</h3>
+            <p class="product-tagline">Energético com blend suave de morango e pêssego.</p>
+          </div>
+          <button type="button" class="product-cta">Ver Detalhes</button>
+        </article>
+
+        <!-- 6 -->
+        <article id="card-acai" class="product-card" data-cat="frutas" data-flavor="flavor-acai" data-kcal="224 kcal" data-cafeina="114 mg" data-acucar="53 g" data-desc="Energético inspirado na energia da Amazônia com o sabor autêntico do açaí." onclick="abrirModalCard(this)">
+          <div>
+            <div class="product-card-img-wrap flavor-acai">
+              <span class="can-flavor-tag">SABOR AÇAÍ</span>
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Energetico-baly-energy-drink-lata-473ml.jpg?width=600" alt="Lata Baly Energy Drink Açaí 473ml" class="product-photo" loading="lazy" />
+            </div>
+            <span class="product-badge">Sabor Brasil</span>
+            <h3 class="product-name">Baly Açaí</h3>
+            <p class="product-tagline">Energético com sabor autêntico de açaí.</p>
+          </div>
+          <button type="button" class="product-cta">Ver Detalhes</button>
+        </article>
+
+        <!-- 7 -->
+        <article id="card-tangerina" class="product-card" data-cat="frutas" data-flavor="flavor-tangerina" data-kcal="215 kcal" data-cafeina="114 mg" data-acucar="50 g" data-desc="Energético cítrico vibrante sabor tangerina com alta refrescância." onclick="abrirModalCard(this)">
+          <div>
+            <div class="product-card-img-wrap flavor-tangerina">
+              <span class="can-flavor-tag">SABOR TANGERINA</span>
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Energetico-baly-energy-drink-lata-473ml.jpg?width=600" alt="Lata Baly Energy Drink Tangerina 473ml" class="product-photo" loading="lazy" />
+            </div>
+            <span class="product-badge">Cítrico 473ml</span>
+            <h3 class="product-name">Baly Tangerina</h3>
+            <p class="product-tagline">Energético cítrico sabor tangerina gelada.</p>
+          </div>
+          <button type="button" class="product-cta">Ver Detalhes</button>
+        </article>
+
+        <!-- 8 -->
+        <article id="card-pitaya" class="product-card" data-cat="frutas" data-flavor="flavor-pitaya" data-kcal="210 kcal" data-cafeina="114 mg" data-acucar="49 g" data-desc="Energético com visual marcante e sabor exótico de pitaya rosa." onclick="abrirModalCard(this)">
+          <div>
+            <div class="product-card-img-wrap flavor-pitaya">
+              <span class="can-flavor-tag">SABOR PITAYA</span>
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Energetico-baly-energy-drink-lata-473ml.jpg?width=600" alt="Lata Baly Energy Drink Pitaya 473ml" class="product-photo" loading="lazy" />
+            </div>
+            <span class="product-badge">Exótico 473ml</span>
+            <h3 class="product-name">Baly Pitaya</h3>
+            <p class="product-tagline">Energético exótico sabor pitaya rosa.</p>
+          </div>
+          <button type="button" class="product-cta">Ver Detalhes</button>
+        </article>
+
+        <!-- 9 -->
+        <article id="card-blueberry" class="product-card" data-cat="frutas" data-flavor="flavor-blueberry" data-kcal="216 kcal" data-cafeina="114 mg" data-acucar="51 g" data-desc="Energético com notas intensas de blueberry e acabamento refrescante." onclick="abrirModalCard(this)">
+          <div>
+            <div class="product-card-img-wrap flavor-blueberry">
+              <span class="can-flavor-tag">SABOR BLUEBERRY</span>
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Energetico-baly-energy-drink-lata-473ml.jpg?width=600" alt="Lata Baly Energy Drink Blueberry 473ml" class="product-photo" loading="lazy" />
+            </div>
+            <span class="product-badge">Frutas Silvestres</span>
+            <h3 class="product-name">Baly Blueberry</h3>
+            <p class="product-tagline">Energético intenso sabor blueberry.</p>
+          </div>
+          <button type="button" class="product-cta">Ver Detalhes</button>
+        </article>
+
+        <!-- 10 -->
+        <article id="card-coco" class="product-card" data-cat="frutas" data-flavor="flavor-coco" data-kcal="212 kcal" data-cafeina="114 mg" data-acucar="49 g" data-desc="Energético com toque tropical de coco, ideal para consumo puro ou em drinks sem álcool." onclick="abrirModalCard(this)">
+          <div>
+            <div class="product-card-img-wrap flavor-coco">
+              <span class="can-flavor-tag">SABOR COCO</span>
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Energetico-baly-energy-drink-lata-473ml.jpg?width=600" alt="Lata Baly Energy Drink Coco 473ml" class="product-photo" loading="lazy" />
+            </div>
+            <span class="product-badge">Tropical 473ml</span>
+            <h3 class="product-name">Baly Coco</h3>
+            <p class="product-tagline">Energético leve com toque tropical de coco.</p>
+          </div>
+          <button type="button" class="product-cta">Ver Detalhes</button>
+        </article>
+
+        <!-- 11 -->
+        <article id="card-maracuja" class="product-card" data-cat="frutas" data-flavor="flavor-maracuja" data-kcal="218 kcal" data-cafeina="114 mg" data-acucar="51 g" data-desc="Energético com o azedinho característico do maracujá e toda a potência da Baly." onclick="abrirModalCard(this)">
+          <div>
+            <div class="product-card-img-wrap flavor-maracuja">
+              <span class="can-flavor-tag">SABOR MARACUJÁ</span>
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Energetico-baly-energy-drink-lata-473ml.jpg?width=600" alt="Lata Baly Energy Drink Maracujá 473ml" class="product-photo" loading="lazy" />
+            </div>
+            <span class="product-badge">Sabor Brasil</span>
+            <h3 class="product-name">Baly Maracujá</h3>
+            <p class="product-tagline">Energético cítrico sabor maracujá.</p>
+          </div>
+          <button type="button" class="product-cta">Ver Detalhes</button>
+        </article>
+
+        <!-- 12 -->
+        <article id="card-fueltech" class="product-card" data-cat="edicoes" data-flavor="flavor-fueltech" data-kcal="215 kcal" data-cafeina="114 mg" data-acucar="51 g" data-desc="Edição exclusiva Baly × FuelTech com arte de painel digital e pista de arrancada na lata 473ml." onclick="abrirModalCard(this)">
+          <div>
+            <div class="product-card-img-wrap flavor-fueltech">
+              <span class="can-flavor-tag">FUELTECH TURBINADO</span>
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Energetico-baly-energy-drink-lata-473ml.jpg?width=600" alt="Lata Baly FuelTech Turbinado 473ml" class="product-photo" loading="lazy" />
+            </div>
+            <span class="product-badge">Edição Limitada</span>
+            <h3 class="product-name">Baly × FuelTech Turbinado</h3>
+            <p class="product-tagline">Energético edição especial para pistas.</p>
+          </div>
+          <button type="button" class="product-cta">Ver Detalhes</button>
+        </article>
+
+        <!-- 13 -->
+        <article id="card-tradicional-zero" class="product-card" data-cat="zero" data-flavor="flavor-zero-trad" data-kcal="10 kcal" data-cafeina="114 mg" data-acucar="0 g" data-desc="Todo o sabor do Baly Tradicional sem adição de açúcares e sem retrogosto." onclick="abrirModalCard(this)">
+          <div>
+            <div class="product-card-img-wrap flavor-zero-trad">
+              <span class="can-flavor-tag">ZERO AÇÚCAR</span>
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Energetico-baly-energy-drink-lata-473ml.jpg?width=600" alt="Lata Baly Tradicional Sem Açúcar 473ml" class="product-photo" loading="lazy" />
+            </div>
+            <span class="product-badge">Zero Açúcar</span>
+            <h3 class="product-name">Baly Tradicional Sem Açúcar</h3>
+            <p class="product-tagline">O clássico Baly com 0g de açúcar.</p>
+          </div>
+          <button type="button" class="product-cta">Ver Detalhes</button>
+        </article>
+
+        <!-- 14 -->
+        <article id="card-tropical-zero" class="product-card" data-cat="zero" data-flavor="flavor-zero-trop" data-kcal="10 kcal" data-cafeina="114 mg" data-acucar="0 g" data-desc="O campeão de vendas Baly Tropical agora em versão leve com zero açúcar." onclick="abrirModalCard(this)">
+          <div>
+            <div class="product-card-img-wrap flavor-zero-trop">
+              <span class="can-flavor-tag">TROPICAL ZERO</span>
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Energetico-baly-energy-drink-lata-473ml.jpg?width=600" alt="Lata Baly Tropical Sem Açúcar 473ml" class="product-photo" loading="lazy" />
+            </div>
+            <span class="product-badge">Zero Açúcar</span>
+            <h3 class="product-name">Baly Tropical Sem Açúcar</h3>
+            <p class="product-tagline">Energético sabor tropical com 0g de açúcar.</p>
+          </div>
+          <button type="button" class="product-cta">Ver Detalhes</button>
+        </article>
+
+        <!-- 15 -->
+        <article id="card-melancia-zero" class="product-card" data-cat="zero" data-flavor="flavor-zero-mel" data-kcal="10 kcal" data-cafeina="114 mg" data-acucar="0 g" data-desc="Energético sabor melancia com baixíssimas calorias e 0g de açúcar." onclick="abrirModalCard(this)">
+          <div>
+            <div class="product-card-img-wrap flavor-zero-mel">
+              <span class="can-flavor-tag">MELANCIA ZERO</span>
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Energetico-baly-energy-drink-lata-473ml.jpg?width=600" alt="Lata Baly Melancia Sem Açúcar 473ml" class="product-photo" loading="lazy" />
+            </div>
+            <span class="product-badge">Zero Açúcar</span>
+            <h3 class="product-name">Baly Melancia Sem Açúcar</h3>
+            <p class="product-tagline">Energético sabor melancia sem açúcar.</p>
+          </div>
+          <button type="button" class="product-cta">Ver Detalhes</button>
+        </article>
+      </div>
+      <p id="emptyCatalogMsg" style="display: none; text-align: center; color: var(--text-muted); padding: 32px;">Nenhum energético encontrado com esse filtro.</p>
+    </section>
+
+    <hr class="divider-line" />
+
+    <!-- ======================================================================
+         PÁGINA / SEÇÃO: SOBRE NÓS (BALY BRASIL)
+         ====================================================================== -->
+    <section id="sobre" class="about-section">
+      <div class="section-block">
+        <div class="section-header-center">
+          <span class="hero-copy-tag">Nossa História &amp; Propósito</span>
+          <h2 class="section-title" style="margin-top: 8px;">SOBRE A <span>BALY BRASIL</span></h2>
+          <p class="section-subtitle">Nascida no sul de Santa Catarina, a Baly se tornou a maior marca brasileira de energéticos ao democratizar o acesso a bebidas de alta qualidade e sabores inovadores.</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-media">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/New_belgium_brewery_bottling_plant.jpg?width=900" alt="Linha de envase industrial Baly Brasil" class="about-main-photo" loading="lazy" />
+            <div class="about-badge-overlay">
+              <strong>100% INDÚSTRIA NACIONAL</strong>
+              <span>Unidades em Tubarão e Treze de Maio • SC</span>
+            </div>
+          </div>
+
+          <div class="about-content">
+            <h3>A MARCA QUE DEMOCRATIZOU O ENERGÉTICO NO BRASIL</h3>
+            <p>Fundada em 1997 em Tubarão (SC), a Baly Brasil transformou o mercado nacional de bebidas ao enxergar o que o consumidor realmente buscava: qualidade, diversidade de sabores e preços acessíveis para acompanhar todos os momentos do dia.</p>
+            <p>Com duas modernas unidades industriais em Santa Catarina — somando mais de 50 mil m² de parque fabril — e um portfólio pioneiro com dezenas de sabores nas versões tradicional e sem açúcar, levamos energia para todo o Brasil e para o mercado internacional.</p>
+
+            <div class="about-stats-grid">
+              <div class="stat-box">
+                <strong>+205M</strong>
+                <span>Litros produzidos por ano</span>
+              </div>
+              <div class="stat-box">
+                <strong>28+</strong>
+                <span>Sabores no portfólio</span>
+              </div>
+              <div class="stat-box">
+                <strong>1997</strong>
+                <span>Fundação em Santa Catarina</span>
+              </div>
+              <div class="stat-box">
+                <strong>27</strong>
+                <span>Estados atendidos no Brasil</span>
+              </div>
+            </div>
+
+            <div class="about-pillars">
+              <div class="pillar-item">
+                <strong>Inovação em Sabores</strong>
+                <p>Pioneirismo em opções tropicais e linha Zero Açúcar sem resíduo de adoçante.</p>
+              </div>
+              <div class="pillar-item">
+                <strong>Conexão com o Público</strong>
+                <p>Presença ativa nos esportes a motor, surf, skate, música e cultura urbana.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider-line" />
+
+    <!-- Novidades (Com Latas Reais Baly) -->
+    <section id="novidades" class="section-block">
+      <div class="section-header-center">
+        <h2 class="section-title">ÚLTIMAS <span>NOVIDADES BALY</span></h2>
+        <p class="section-subtitle">Lançamentos, edições colecionáveis e ações especiais da Baly Brasil.</p>
+      </div>
+      <div class="cards-3-grid">
+        <article class="news-card">
+          <div class="news-visual flavor-fueltech">
+            <span class="news-tag">Edição Especial</span>
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Energetico-baly-energy-drink-lata-473ml.jpg?width=600" alt="Lata Baly FuelTech Turbinado 473ml" class="card-real-img" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <div>
+              <div class="card-date">Novembro 2026 • Motorsport</div>
+              <h3 class="card-title">Lata Baly × FuelTech Turbinado</h3>
+              <p class="card-text">Arte exclusiva trazendo o painel FT700 e as pistas de arrancada diretamente para a lata 473ml.</p>
+            </div>
+            <button type="button" class="btn-primary" onclick="abrirProdutoPorId('card-fueltech')">Ver Lata</button>
+          </div>
+        </article>
+
+        <article class="news-card">
+          <div class="news-visual flavor-tropical">
+            <span class="news-tag">Impacto Social</span>
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Energetico-baly-energy-drink-lata-473ml.jpg?width=600" alt="Lata Baly Campanha Nacional 473ml" class="card-real-img" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <div>
+              <div class="card-date">Campanha Nacional • Baly Brasil</div>
+              <h3 class="card-title">Projeto Vai de Baly, Vai por Elas</h3>
+              <p class="card-text">Edição especial dedicada ao fortalecimento do empreendedorismo e protagonismo feminino em todo o Brasil.</p>
+            </div>
+            <button type="button" class="btn-primary" onclick="abrirModalInfo('campanha')">Conhecer</button>
+          </div>
+        </article>
+
+        <article class="news-card">
+          <div class="news-visual flavor-zero-trad">
+            <span class="news-tag">Zero Açúcar</span>
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Energetico-baly-energy-drink-lata-473ml.jpg?width=600" alt="Lata Baly Sem Açúcar 473ml" class="card-real-img" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <div>
+              <div class="card-date">Linha Leve • 473ml e 2L</div>
+              <h3 class="card-title">Família Baly Sem Açúcar</h3>
+              <p class="card-text">Os sabores favoritos do Brasil agora disponíveis na versão Sem Açúcar sem deixar resíduo de adoçante.</p>
+            </div>
+            <button type="button" class="btn-primary" onclick="filtrarCatalogo('zero')">Ver Sabores Zero</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <hr class="divider-line" />
+
+    <!-- Atletas & Pistas -->
+    <section id="atletas" class="section-block">
+      <div class="section-header-center">
+        <h2 class="section-title">TIME <span>BALY NAS PISTAS</span></h2>
+        <p class="section-subtitle">Apoio ao esporte nacional, arrancada, surf, skate e festivais de música.</p>
+      </div>
+      <div class="cards-3-grid">
+        <article class="athlete-card">
+          <div class="news-visual">
+            <span class="news-tag">Arrancada &amp; Drift</span>
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Race_car_@_Paris_(28038096245).jpg?width=600" alt="Arrancada e Drift Baly FuelTech" class="card-real-img" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <div>
+              <div class="card-date">Automobilismo • Brasil</div>
+              <h3 class="card-title">Squad Baly FuelTech Racing</h3>
+              <p class="card-text">Presença oficial nos maiores festivais de arrancada e drift da América Latina.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="athlete-card">
+          <div class="news-visual">
+            <span class="news-tag">Surf &amp; Verão</span>
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Riding_the_crashing_waves_(Unsplash).jpg?width=600" alt="Surf Baly Brasil" class="card-real-img" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <div>
+              <div class="card-date">Litoral Catarinense &amp; Brasil</div>
+              <h3 class="card-title">Etapas Surf &amp; Beach Club</h3>
+              <p class="card-text">Energia gelada nas praias brasileiras apoiando surfistas e campeonatos de verão.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="athlete-card">
+          <div class="news-visual">
+            <span class="news-tag">E-Sports</span>
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/ESports-SimRacing_ADAC-Digital-Cup-2019_DAMC05_Porsche_Cayman_GT4.jpg?width=600" alt="E-Sports Baly Gamer" class="card-real-img" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <div>
+              <div class="card-date">Arena Gamer • Brasil</div>
+              <h3 class="card-title">Baly Gamer &amp; Streamers</h3>
+              <p class="card-text">Foco, reflexo e energia para maratonas competitivas nos maiores eventos gamers do país.</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <hr class="divider-line" />
+
+    <!-- Promoções -->
+    <section id="promocoes" class="section-block">
+      <div class="promo-box">
+        <div>
+          <span class="hero-copy-tag">Clube Vai de Baly</span>
+          <h2 class="section-title" style="margin-top: 6px;">VALIDE SEU <span>CÓDIGO PROMOCIONAL</span></h2>
+          <p class="section-subtitle" style="margin: 0;">Recebeu um cupom em ações promocionais ou eventos Baly? Digite abaixo para conferir sua recompensa. (Teste com: <strong>BALY2026</strong>, <strong>VAIDEBALY</strong> ou <strong>FUELTECH</strong>)</p>
+        </div>
+        <div>
+          <form class="promo-form" id="promoForm">
+            <input type="text" id="promoCodeInput" class="promo-input" placeholder="DIGITE SEU CÓDIGO" maxlength="20" required />
+            <button type="submit" class="btn-primary">Validar</button>
+          </form>
+          <div id="promoFeedback" class="promo-feedback" aria-live="polite"></div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider-line" />
+
+    <!-- Eventos -->
+    <section id="eventos" class="section-block">
+      <div class="section-header-center">
+        <h2 class="section-title">AGENDA DE <span>EVENTOS BALY</span></h2>
+        <p class="section-subtitle">Onde encontrar os caminhões, arenas e degustações oficiais da Baly Brasil.</p>
+      </div>
+      <div class="events-list">
+        <div class="event-row">
+          <div class="event-date-box"><strong>29 NOV</strong><span>2026</span></div>
+          <div class="event-info">
+            <h3>Festival Brasileiro de Arrancada — Arena Baly FuelTech</h3>
+            <p>Velopark • Nova Santa Rita, RS — Paddock aberto e degustação da edição FuelTech.</p>
+          </div>
+          <button type="button" class="btn-primary" onclick="abrirModalInfo('evento-rs')">Detalhes</button>
+        </div>
+
+        <div class="event-row">
+          <div class="event-date-box"><strong>13 DEZ</strong><span>2026</span></div>
+          <div class="event-info">
+            <h3>Verão Vai de Baly — Praia do Rosa &amp; Floripa</h3>
+            <p>Florianópolis, SC — Palco sunset, esportes de praia e linha Baly Tropical gelada.</p>
+          </div>
+          <button type="button" class="btn-primary" onclick="abrirModalInfo('evento-sc')">Detalhes</button>
+        </div>
+
+        <div class="event-row">
+          <div class="event-date-box"><strong>20 DEZ</strong><span>2026</span></div>
+          <div class="event-info">
+            <h3>Baly Music &amp; Street Fest</h3>
+            <p>Memorial da América Latina • São Paulo, SP — Shows, batalhas de rima e ativações.</p>
+          </div>
+          <button type="button" class="btn-primary" onclick="abrirModalInfo('evento-sp')">Detalhes</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contato e FAQ -->
+    <section id="contato" class="contact-section">
+      <div class="section-block">
+        <div class="section-header-center">
+          <h2 class="section-title">FALE COM A <span>BALY BRASIL</span></h2>
+          <p class="section-subtitle">Atendimento ao consumidor, solicitações comerciais para revenda, eventos e dúvidas sobre produtos.</p>
+        </div>
+
+        <div class="contact-layout">
+          <div class="contact-card">
+            <form id="contactForm" novalidate>
+              <div class="form-grid-2">
+                <div class="form-group">
+                  <label for="nomeInput">Nome Completo *</label>
+                  <input type="text" id="nomeInput" class="form-control" placeholder="Seu nome" required />
+                  <span class="form-error" id="errNome"></span>
+                </div>
+                <div class="form-group">
+                  <label for="emailInput">E-mail *</label>
+                  <input type="email" id="emailInput" class="form-control" placeholder="voce@exemplo.com.br" required />
+                  <span class="form-error" id="errEmail"></span>
+                </div>
+              </div>
+
+              <div class="form-grid-2">
+                <div class="form-group">
+                  <label for="assuntoSelect">Assunto *</label>
+                  <select id="assuntoSelect" class="form-control">
+                    <option value="Quero Revender Baly">Quero Ser Cliente / Revender Baly</option>
+                    <option value="Dúvida sobre Sabores">Dúvida sobre Sabores e Ingredientes</option>
+                    <option value="SAC / Qualidade">SAC / Atendimento ao Consumidor</option>
+                    <option value="Eventos e Patrocínios">Eventos e Patrocínios</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="cidadeInput">Cidade / Estado</label>
+                  <input type="text" id="cidadeInput" class="form-control" placeholder="Ex: Muriaé - MG" />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="mensagemInput">Mensagem *</label>
+                <textarea id="mensagemInput" class="form-control" rows="4" placeholder="Escreva sua mensagem detalhada..." required></textarea>
+                <span class="form-error" id="errMensagem"></span>
+              </div>
+
+              <label class="checkbox-row">
+                <input type="checkbox" id="lgpdCheck" required />
+                <span>Concordo com a Política de Privacidade da Baly Brasil para retorno deste atendimento (LGPD).</span>
+              </label>
+
+              <button type="submit" class="btn-primary">Enviar Mensagem</button>
+            </form>
+
+            <div id="protocolTicket" class="protocol-ticket" role="status">
+              <strong style="color: var(--baly-yellow);">Atendimento registrado com sucesso!</strong>
+              <p id="protocolText" style="margin: 6px 0 0; font-size: 0.92rem;"></p>
+            </div>
+
+            <div class="history-box" id="historyBox" style="display: none;">
+              <h4 style="font-family: var(--font-display); text-transform: uppercase; margin: 0 0 10px; color: var(--baly-yellow);">Protocolos desta Sessão</h4>
+              <div id="historyList"></div>
+            </div>
+          </div>
+
+          <aside class="contact-card">
+            <h3 style="font-family: var(--font-display); text-transform: uppercase; margin-top: 0;">Canais Oficiais Baly</h3>
+
+            <div class="sac-channel">
+              <div class="sac-icon">☎</div>
+              <div>
+                <strong>SAC Baly Brasil</strong>
+                <p style="margin: 4px 0 0; color: var(--text-muted); font-size: 0.9rem;">0800 644 2259 • Seg a Sex, das 8h às 18h</p>
+              </div>
+            </div>
+
+            <div class="sac-channel">
+              <div class="sac-icon">✉</div>
+              <div>
+                <strong>Comercial &amp; Atendimento</strong>
+                <p style="margin: 4px 0 0; color: var(--text-muted); font-size: 0.9rem;">sac@balybrasil.com.br</p>
+              </div>
+            </div>
+
+            <h3 style="font-family: var(--font-display); text-transform: uppercase; margin: 24px 0 10px;">Perguntas Frequentes</h3>
+
+            <div class="faq-item">
+              <button type="button" class="faq-btn" onclick="toggleFaq(this)">Qual a quantidade de cafeína e taurina do Baly? <span>+</span></button>
+              <div class="faq-answer">Cada porção de 250ml contém 60mg de cafeína e 765mg de taurina (cerca de 114mg de cafeína e 1.447mg de taurina na lata de 473ml), além das vitaminas B3, B5, B6 e B12.</div>
+            </div>
+
+            <div class="faq-item">
+              <button type="button" class="faq-btn" onclick="toggleFaq(this)">O energético Baly contém álcool? <span>+</span></button>
+              <div class="faq-answer">Não. Toda a linha Baly Energy Drink é 100% livre de álcool, sendo composta por água gaseificada, taurina, cafeína e vitaminas.</div>
+            </div>
+
+            <div class="faq-item">
+              <button type="button" class="faq-btn" onclick="toggleFaq(this)">Quais tamanhos de embalagem existem? <span>+</span></button>
+              <div class="faq-answer">Além da tradicional lata de 473ml, o Baly Energy Drink está disponível em latas de 250ml e garrafas PET de 1L e 2L nos principais sabores.</div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Rodapé -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <h4>Baly® Brasil</h4>
+        <p>A marca que democratizou o energético no Brasil. Energia com identidade brasileira, sabores tropicais e presença nacional.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Energéticos</h4>
+        <ul>
+          <li><a href="#produtos" onclick="filtrarCatalogo('tradicional')">Baly Tradicional</a></li>
+          <li><a href="#produtos" onclick="filtrarCatalogo('frutas')">Sabores Frutados</a></li>
+          <li><a href="#produtos" onclick="filtrarCatalogo('zero')">Linha Sem Açúcar</a></li>
+          <li><a href="#produtos" onclick="filtrarCatalogo('edicoes')">Baly × FuelTech</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Institucional</h4>
+        <ul>
+          <li><a href="#sobre">Sobre Nós</a></li>
+          <li><a href="#novidades">Novidades</a></li>
+          <li><a href="#atletas">Atletas &amp; Pistas</a></li>
+          <li><a href="#eventos">Eventos</a></li>
+          <li><a href="#contato">Quero Ser Cliente</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Consumo Responsável</h4>
+        <p>Não recomendado para crianças, gestantes, nutrizes, idosos e portadores de enfermidades. Não misturar com bebidas alcoólicas.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Baly Brasil • Todos os direitos reservados.</span>
+      <span>Brasil • Português (PT-BR)</span>
+    </div>
+  </footer>
+
+  <!-- Modal Reutilizável -->
+  <div id="mainModal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-dialog">
+      <button type="button" class="modal-close" aria-label="Fechar janela" onclick="fecharModal()">×</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <!-- Widget Flutuante de Acessibilidade -->
+  <button type="button" class="a11y-fab" aria-label="Abrir opções de acessibilidade" title="Acessibilidade" onclick="toggleA11yDrawer()">♿</button>
+  <aside id="a11yDrawer" class="a11y-drawer" aria-label="Painel de Acessibilidade">
+    <h2>
+      <span>Acessibilidade</span>
+      <button type="button" onclick="resetarA11y()" style="background:none;border:none;color:var(--baly-yellow);cursor:pointer;font-size:0.8rem;">Resetar</button>
+    </h2>
+    <div class="a11y-grid">
+      <button type="button" class="a11y-option" onclick="alterarFonte(0.1)">Aumentar Texto A+</button>
+      <button type="button" class="a11y-option" onclick="alterarFonte(-0.1)">Diminuir Texto A-</button>
+      <button type="button" class="a11y-option" onclick="toggleClasseBody('a11y-high-contrast', this)">Alto Contraste</button>
+      <button type="button" class="a11y-option" onclick="toggleClasseBody('a11y-grayscale', this)">Escala de Cinza</button>
+      <button type="button" class="a11y-option" onclick="toggleClasseBody('a11y-underline', this)">Sublinhar Links</button>
+      <button type="button" class="a11y-option" onclick="toggleClasseBody('a11y-dyslexia', this)">Leitura Dislexia</button>
+      <button type="button" class="a11y-option" style="grid-column: span 2;" onclick="toggleClasseBody('a11y-no-motion', this)">Reduzir Animações</button>
+    </div>
+  </aside>
+
+  <script>
+    /* 1. Filtro e Busca no Catálogo */
+    let categoriaAtiva = 'todos';
+
+    function filtrarCatalogo(cat, botaoClicado) {
+      categoriaAtiva = cat;
+      document.querySelectorAll('.filter-pill').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.cat === cat);
+      });
+      aplicarFiltrosDOM();
+      if (!botaoClicado) {
+        document.getElementById('produtos').scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
+    function pesquisarCatalogo() {
+      aplicarFiltrosDOM();
+    }
+
+    function aplicarFiltrosDOM() {
+      const termo = document.getElementById('catalogSearch').value.trim().toLowerCase();
+      const cards = document.querySelectorAll('#productsGrid .product-card');
+      let visiveis = 0;
+
+      cards.forEach(card => {
+        const cat = card.dataset.cat;
+        const texto = card.textContent.toLowerCase();
+        const exibir = (categoriaAtiva === 'todos' || cat === categoriaAtiva) && (!termo || texto.includes(termo));
+        card.style.display = exibir ? 'flex' : 'none';
+        if (exibir) visiveis++;
+      });
+
+      document.getElementById('emptyCatalogMsg').style.display = visiveis === 0 ? 'block' : 'none';
+    }
+
+    /* 2. Carrossel Hero */
+    let slideAtual = 0;
+    let autoplayAtivo = true;
+    const slides = document.querySelectorAll('.hero-slide');
+    const dots = document.querySelectorAll('.hero-dot');
+
+    function atualizarHero() {
+      slides.forEach((s, i) => s.classList.toggle('active', i === slideAtual));
+      dots.forEach((d, i) => d.classList.toggle('active', i === slideAtual));
+
+      const ativo = slides[slideAtual];
+      document.getElementById('heroBottomLabel').textContent = ativo.dataset.label;
+      document.getElementById('heroBottomBtn').onclick = () => abrirProdutoPorId(ativo.dataset.card);
+    }
+
+    function mudarSlide(direcao) {
+      slideAtual = (slideAtual + direcao + slides.length) % slides.length;
+      atualizarHero();
+    }
+
+    function irParaSlide(indice) {
+      slideAtual = indice;
+      atualizarHero();
+    }
+
+    setInterval(() => {
+      if (autoplayAtivo) mudarSlide(1);
+    }, 6000);
+
+    function alternarAutoplay() {
+      autoplayAtivo = !autoplayAtivo;
+      document.getElementById('heroPauseBtn').textContent = autoplayAtivo ? '❚❚' : '▶';
+    }
+
+    /* 3. Modais de Produto (com Imagem Real da Lata Baly) */
+    function abrirModalCard(card) {
+      const nome = card.querySelector('.product-name').textContent;
+      const badge = card.querySelector('.product-badge').textContent;
+      const imgSrc = card.querySelector('img').src;
+      const { flavor, kcal, cafeina, acucar, desc } = card.dataset;
+
+      document.getElementById('modalContent').innerHTML = `
+        <div class="product-modal-grid">
+          <div class="modal-img-stage ${flavor}">
+            <img src="${imgSrc}" alt="${nome}" class="modal-real-photo" />
+          </div>
+          <div>
+            <span class="product-badge">${badge}</span>
+            <h2 id="modalTitle" style="font-family: var(--font-display); text-transform: uppercase; margin: 4px 0 10px; font-size: 1.9rem;">${nome}</h2>
+            <p style="color: var(--text-muted); margin-top: 0;">${desc}</p>
+            <table class="nutrition-table">
+              <thead>
+                <tr><th>Informação Nutricional (Lata 473ml)</th><th>Quantidade</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Valor Energético</td><td><strong>${kcal}</strong></td></tr>
+                <tr><td>Cafeína (60mg / 250ml)</td><td><strong>${cafeina}</strong></td></tr>
+                <tr><td>Açúcares Totais</td><td><strong>${acucar}</strong></td></tr>
+                <tr><td>Taurina (765mg / 250ml)</td><td><strong>1.447 mg</strong></td></tr>
+                <tr><td>Vitaminas B3, B5, B6 e B12</td><td><strong>100% VD</strong></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      `;
+      document.getElementById('mainModal').classList.add('open');
+    }
+
+    function abrirProdutoPorId(cardId) {
+      const card = document.getElementById(cardId);
+      if (card) abrirModalCard(card);
+    }
+
+    function abrirModalInfo(tipo) {
+      const infos = {
+        onde: {
+          titulo: 'Onde Encontrar Baly no Brasil',
+          texto: 'Os energéticos Baly estão presentes em supermercados, atacadistas, lojas de conveniência e distribuidores em todos os estados brasileiros, nas versões lata 250ml, lata 473ml e garrafas 1L e 2L.'
+        },
+        regiao: {
+          titulo: 'Região Selecionada: Brasil (PT-BR)',
+          texto: 'Portal Baly Brasil. Indústria 100% nacional com fabricação certificada em Santa Catarina e sabores criados para o paladar brasileiro.'
+        },
+        campanha: {
+          titulo: 'Campanha Vai de Baly, Vai por Elas',
+          texto: 'Iniciativa nacional da Baly Brasil com latas temáticas especiais destinadas a apoiar projetos de empreendedorismo, liderança e desenvolvimento feminino.'
+        },
+        'evento-rs': {
+          titulo: 'Festival Brasileiro de Arrancada — Velopark (RS)',
+          texto: 'Data: 29 de Novembro de 2026 • Local: Nova Santa Rita, RS. Espaço exclusivo Baly × FuelTech com carros de pista e degustação.'
+        },
+        'evento-sc': {
+          titulo: 'Verão Vai de Baly — Florianópolis (SC)',
+          texto: 'Data: 13 de Dezembro de 2026 • Local: Florianópolis, SC. Arena de praia, música e toda a linha Baly Tropical e Zero Açúcar.'
+        },
+        'evento-sp': {
+          titulo: 'Baly Music & Street Fest — São Paulo (SP)',
+          texto: 'Data: 20 de Dezembro de 2026 • Local: Memorial da América Latina, SP. Cultura urbana, skate e shows ao vivo.'
+        }
+      };
+      const item = infos[tipo] || infos.onde;
+      document.getElementById('modalContent').innerHTML = `
+        <span class="product-badge">Baly Energy Drink Brasil</span>
+        <h2 id="modalTitle" style="font-family: var(--font-display); text-transform: uppercase; margin: 6px 0 12px;">${item.titulo}</h2>
+        <p style="color: var(--text-muted); line-height: 1.7;">${item.texto}</p>
+      `;
+      document.getElementById('mainModal').classList.add('open');
+    }
+
+    function fecharModal() {
+      document.getElementById('mainModal').classList.remove('open');
+    }
+
+    document.getElementById('mainModal').addEventListener('click', e => {
+      if (e.target.id === 'mainModal') fecharModal();
+    });
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') fecharModal();
+    });
+
+    /* 4. Validador Promocional e Contato */
+    document.getElementById('promoForm').addEventListener('submit', e => {
+      e.preventDefault();
+      const code = document.getElementById('promoCodeInput').value.trim().toUpperCase();
+      const fb = document.getElementById('promoFeedback');
+
+      if (code === 'BALY2026' || code === 'VAIDEBALY' || code === 'FUELTECH') {
+        fb.style.color = 'var(--baly-yellow)';
+        fb.textContent = `Código "${code}" validado! Você desbloqueou um voucher oficial no Clube Vai de Baly.`;
+      } else {
+        fb.style.color = '#ff6b6b';
+        fb.textContent = `Código "${code}" inválido. Experimente BALY2026 ou VAIDEBALY.`;
+      }
+    });
+
+    document.getElementById('contactForm').addEventListener('submit', e => {
+      e.preventDefault();
+      const nome = document.getElementById('nomeInput').value.trim();
+      const email = document.getElementById('emailInput').value.trim();
+      const assunto = document.getElementById('assuntoSelect').value;
+      const mensagem = document.getElementById('mensagemInput').value.trim();
+      const lgpd = document.getElementById('lgpdCheck').checked;
+
+      document.getElementById('errNome').textContent = nome ? '' : 'Informe seu nome.';
+      document.getElementById('errEmail').textContent = email.includes('@') ? '' : 'Informe um e-mail válido.';
+      document.getElementById('errMensagem').textContent = mensagem.length >= 10 ? '' : 'Escreva pelo menos 10 caracteres.';
+
+      if (!nome || !email.includes('@') || mensagem.length < 10 || !lgpd) return;
+
+      const protocolo = 'BALY-' + Math.floor(100000 + Math.random() * 900000);
+      document.getElementById('protocolText').innerHTML = `Protocolo: <strong>${protocolo}</strong> • Assunto: ${assunto}. Retorno enviado para <strong>${email}</strong>.`;
+      document.getElementById('protocolTicket').classList.add('visible');
+
+      const historyBox = document.getElementById('historyBox');
+      const historyList = document.getElementById('historyList');
+      historyBox.style.display = 'block';
+      historyList.insertAdjacentHTML('afterbegin', `<div class="history-item"><strong>${protocolo}</strong> — ${assunto} (${new Date().toLocaleDateString('pt-BR')})</div>`);
+      e.target.reset();
+    });
+
+    function toggleFaq(btn) {
+      const item = btn.parentElement;
+      const aberto = item.classList.toggle('open');
+      btn.querySelector('span').textContent = aberto ? '−' : '+';
+    }
+
+    /* 5. Acessibilidade, Menu e Vinculação Opcional de Fotos Locais */
+    let fontScale = 1;
+    function alterarFonte(delta) {
+      fontScale = Math.min(1.3, Math.max(0.85, +(fontScale + delta).toFixed(2)));
+      document.documentElement.style.setProperty('--font-scale', fontScale);
+    }
+
+    function toggleClasseBody(classe, btn) {
+      document.body.classList.toggle(classe);
+      btn.classList.toggle('active');
+    }
+
+    function resetarA11y() {
+      fontScale = 1;
+      document.documentElement.style.setProperty('--font-scale', 1);
+      document.body.className = '';
+      document.querySelectorAll('.a11y-option').forEach(b => b.classList.remove('active'));
+    }
+
+    function toggleA11yDrawer() {
+      document.getElementById('a11yDrawer').classList.toggle('open');
+    }
+
+    function toggleMegaMenu() {
+      document.getElementById('navProdutos').classList.toggle('open');
+    }
+
+    function toggleMobileNav() {
+      const nav = document.querySelector('.main-nav');
+      nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+      nav.style.flexDirection = 'column';
+      nav.style.position = 'absolute';
+      nav.style.top = '70px';
+      nav.style.left = '0';
+      nav.style.right = '0';
+      nav.style.background = '#080808';
+      nav.style.padding = '16px 24px';
+    }
+
+    function focarBusca() {
+      const input = document.getElementById('catalogSearch');
+      input.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      input.focus();
+    }
+
+    document.getElementById('heroFileInput').addEventListener('change', e => {
+      if (e.target.files[0]) {
+        const url = URL.createObjectURL(e.target.files[0]);
+        const slide1 = document.getElementById('heroSlide1Bg');
+        slide1.style.backgroundImage = `linear-gradient(90deg, rgba(8,8,8,0.88) 0%, rgba(8,8,8,0.45) 55%, rgba(8,8,8,0.12) 100%), url('${url}')`;
+        slide1.style.backgroundSize = 'cover';
+        slide1.style.backgroundPosition = 'center';
+        slide1.style.color = '#ffffff';
+      }
+    });
+
+    document.getElementById('fuelFileInput').addEventListener('change', e => {
+      if (e.target.files[0]) {
+        const url = URL.createObjectURL(e.target.files[0]);
+        const slide2 = document.getElementById('heroSlide2Bg');
+        slide2.style.backgroundImage = `linear-gradient(90deg, rgba(8,8,8,0.9) 0%, rgba(8,8,8,0.45) 60%, rgba(8,8,8,0.15) 100%), url('${url}')`;
+        slide2.style.backgroundSize = 'cover';
+        slide2.style.backgroundPosition = 'center';
+      }
+    });
+  </script>
+</body>
+</html>
